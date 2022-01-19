@@ -58,6 +58,8 @@ Prop planning means planning the name and type of props a component will have . 
 State Planning refers to the state variables that you need in order to create the component. And in which component the state will be located in the component tree.
 
 
+
+
 ## Basic Rules
 
 - Always use Typescript
@@ -148,6 +150,29 @@ import Footer from './Footer';
 <Card title="Awesome Title" />
 ```
 
+- Props should have meaningful names. Keep them simple, small and easy to understand and interpret.
+
+```jsx
+
+// bad
+<Card text="Awesome" />
+
+// bad
+<Card titleText="Awesome" />
+
+// good
+<Card title="Awesome"/>
+
+```
+
+- Limit number of props to a component max of 6 props. More than 6 props should have a valid reason.
+
+# State
+
+- Max number of recommended useState hooks that should be used is 4. If you need more state variables. Either move the state to useReducer hook or move it to store. 
+- State variables names should be meaningful, simple and easy to understand their meaning.
+
+
 # Ordering 
 
 > Ordering is very important while writing standardized code
@@ -175,7 +200,7 @@ After that you will write the return statement which returns jsx of the componen
 
 # Refs
 
-Instead of using Refs directly by assigning or reading `ref.current` property of `ref`, create getter and setter functions for `ref` called getRef and setRef.
+Instead of using Refs directly by assigning or reading `ref.current` property of `ref`, create getter and setter functions for `ref` called `getRef` and `setRef`.
 
 ```js
 // bad
@@ -223,6 +248,7 @@ console.log(getRef());
 ```
 
 # Key Prop in Lists
+
 > Avoid using an array index as key prop, prefer a unique ID.
 
 ```jsx
@@ -243,3 +269,12 @@ console.log(getRef());
     );
 )}
 ```
+
+# Child Components
+
+
+# Styled Components
+
+All the styled components should go in the file `Card.styled.tsx`, if the file goes beyond split the file into mutiple files.
+
+
