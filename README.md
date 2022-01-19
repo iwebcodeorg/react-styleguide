@@ -60,7 +60,7 @@ State Planning refers to the state variables that you need in order to create th
 
 
 
-## Basic Rules
+# Basic Rules
 
 - Always use Typescript
 - Only One Component Per File
