@@ -160,6 +160,20 @@ import Footer from "./Footer";
 
 ```
 
+- if writing conditional classes use clsx library to join their names.
+
+```js
+
+// bad
+<div className={"card "+ (isActive ? "active": "")}>
+</div>
+
+// good
+<div className={clsx("card", {active: isActive})}>
+</div>
+
+```
+
 - Limit number of props to a component max of 6 props. More than 6 props should have a valid reason.
 
 # State
@@ -234,7 +248,7 @@ const Foo = ({ enabled }) => {
 
 ```js
 // bad
-const Foo = ({ enabled }) => {
+const Foo = () => {
   return (
     <div className="col-3">
       Hello there, {useSelector((state) => state.info.name)}
@@ -243,12 +257,22 @@ const Foo = ({ enabled }) => {
 };
 
 // good
-const Foo = ({ enabled }) => {
+const Foo = () => {
   const name = useSelector((state) => state.info.name);
 
   return <div className="col-3">Hello there, {name}</div>;
 };
 
+// bad
+const Foo = () => {
+  return <div className={clsx("col-3", useClasses().root)}>Hello there</div>;
+};
+
+// good
+const Foo = () => {
+  const classes = useClasses();
+  return <div className={clsx("col-3", classes.root)}>Hello there</div>;
+};
 ```
 
 # Refs
