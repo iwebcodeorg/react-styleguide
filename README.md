@@ -81,7 +81,8 @@ Points to remember when importing components from external libs or iternally.
 
 ```js
 //bad
-import React, { useEffect, useState } from "react";
+import React, { useEffect,
+useState } from "react";
 
 // good
 import React, { useEffect, useState } from "react";
