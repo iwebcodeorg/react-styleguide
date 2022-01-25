@@ -26,7 +26,7 @@ The above image is a screenshot of a section. The main Component is the whole se
 
 ## Prop Planning
 
-Prop planning means planning the name and type of props a component will have . Lets take the example of Above `FeatureSection` Component. `HeadingWithInfo` component can have two props named `info` and `title` and both of these props will be of type string. Lets make the prop diagram of the above mentioned components.
+Prop planning means planning the name and type of props a component will have . Lets take the example of Above `HeadingWithInfo` Component. This component can have two props named `info` and `title` and both of these props will be of type string. Lets make the prop specification of the above mentioned components.
 
 > StyleProps = {style: React.CSSProperties; className: string;} \
 >  StyleProps here refers to Common Styling Props that could be useful in overriding the Atomic component in some places.
@@ -34,9 +34,6 @@ Prop planning means planning the name and type of props a component will have . 
 - `HeadingWithInfo`
   - `title: string`
   - `info: string`
-- `Card`
-  - `children: React.ReactNode`
-  - `...StyleProps`
 - `Card`
   - `children: React.ReactNode`
   - `...StyleProps`
