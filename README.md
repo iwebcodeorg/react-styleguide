@@ -190,10 +190,9 @@ import Footer from "./Footer";
   - `useContext` Hook
   - `useRef` Hook
   - external library hooks
-  - `useSelector`
-  - `useDispatch`
-  - `useActions`
-  - etc
+    - `useSelector`
+    - `useDispatch`
+    - `useActions`, etc
   - `useMemo` Hook
   - `useCallback` Hook
   - Any event handlers like `handleSubmit`, `handleClick`, etc
