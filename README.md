@@ -63,7 +63,7 @@ State Planning refers to the state variables that you need in order to create th
 
 # Naming
 
-Naming of components should follow the following guidelines:
+Naming of components, props, hooks should follow the following guidelines:
 
 - Component filenames should be PascalCase e.g `CardImage`, `HeaderWithInfo`,etc
 - Hooks name should be camelCase e.g `useIsomorphicEffect`, `useTabs`, etc
